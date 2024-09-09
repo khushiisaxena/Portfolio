@@ -1,0 +1,433 @@
+// Custom.scss
+// https://getbootstrap.com/docs/5.0/customize/sass/
+
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+
+// 2. Include any default variable overrides here
+
+// $primary-background: #FFFFFF;
+// $secondary-background: #F7F7F7;
+// $tertiary-background: #365B6D;
+
+// $primary-font: #000000;
+// $secondary-font: #F7F7F7;
+// $tertiary-font: #365B6D;
+// $inverted-font: #FFFFFF;
+
+// bootstrap overrides 
+$primary: #2B6777;
+$secondary: #d2e3ef;
+$light: #FFFFFF;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+$font-family-sans-serif: -apple-system, 'Barlow', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$card-border-radius: 15px;
+
+
+
+// font 
+// Title
+// font-family: Barlow;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 64px;
+// line-height: 77px;
+
+// Heading1
+// font-family: Barlow;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 50px;
+// line-height: 60px;
+
+// Heading2
+// font-family: Barlow;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 24px;
+// line-height: 29px;
+
+// Lead Text
+// font-family: Barlow;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 18px;
+// line-height: 22px;
+
+// Normal
+// font-family: Barlow;
+// font-style: normal;
+// font-weight: normal;
+// font-size: 15px;
+// line-height: 18px;
+
+
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+
+// Layout & components (optional Bootstrap components)
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/button-group";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/accordion";
+@import "~bootstrap/scss/breadcrumb";
+@import "~bootstrap/scss/pagination";
+@import "~bootstrap/scss/badge";
+@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/progress";
+@import "~bootstrap/scss/list-group";
+@import "~bootstrap/scss/close";
+@import "~bootstrap/scss/toasts";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/tooltip";
+@import "~bootstrap/scss/popover";
+@import "~bootstrap/scss/carousel";
+@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/offcanvas";
+// Helpers
+@import "~bootstrap/scss/helpers";
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
+
+// 5. Add additional custom code here
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon-style {
+  font-family: $font-family-sans-serif;
+  color: black;
+}
+
+
+//work
+.card-work {
+  background-color: #0fa4af;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-image {
+  transition: all .3s;
+  border-radius: $card-border-radius;
+  box-shadow: 1rem 1rem #0fa4af;
+}
+
+.card-image:hover {
+  transform: translate(-0.5rem, -0.5rem);
+  box-shadow: 2rem 2rem $primary;
+}
+
+.card-work:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Animations */
+.icon-style {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-style:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+/* Button Hover Animations */
+.btn {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f39c12;
+  transform: scale(1.05);
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-work {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+
+.skill-card {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.skill-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.icon-java { color: #007396; } /* Java blue */
+.icon-python { color: #306998; } /* Python blue */
+.icon-html { color: #e34f26; } /* HTML orange */
+.icon-css { color: #1572b6; } /* CSS blue */
+.icon-javascript { color: #f7df1e; } /* JavaScript yellow */
+.icon-react { color: #61dafb; } /* React blue */
+.icon-nodejs { color: #68a063; } /* Node.js green */
+.icon-mysql { color: #dcdc04; } /* MySQL blue */
+.icon-git { color: #f05032; } /* Git orange */
+.icon-github { color: #181717; } /* GitHub black */
+.icon-selenium { color: #43b02a; } /* Selenium green */
+.icon-c { color: #A8B9CC; } /* C programming language blue */
+.icon-graphql { color: #d518a0; } /* graphQL pink  */
+
+.btn{
+  background-color: #0fa4af;
+}
+
+
+// FOOTER
+/* General Animation Styles */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes buttonHover {
+  0%, 100% {
+    transform: scale(1);
+    background-color: #007bff;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #0056b3;
+  }
+}
+
+/* Applying Animations */
+
+.fade-in {
+  animation: fadeIn 10s ease-in-out;
+}
+
+.slide-in {
+  animation: slideIn 10s ease-out;
+}
+
+.btn-animate:hover {
+  animation: buttonHover 0.7s ease-in-out;
+}
+
+.btn-animate:active {
+  transform: scale(0.95);
+  transition: transform 0.2s;
+}
+
+
+//INTRO
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Applying Animations */
+.fade-in {
+  animation: fadeIn 5s ease-in-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 3s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 10s ease-out forwards;
+}
+
+.bounce-in {
+  animation: bounceIn 1s ease-in-out forwards;
+}
+
+.btn-animate:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+// NAVBAR
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes linkHover {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Applying Animations */
+.fade-in {
+  animation: fadeIn 1.2s ease-in forwards;
+}
+
+.slide-in-top {
+  animation: slideInTop 0.5s ease-out forwards;
+}
+
+.nav-item-animate:hover {
+  animation: linkHover 0.2s ease-in-out forwards;
+}
+
+.navbar-brand {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.custom-toggler {
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-toggler:hover {
+  transform: rotate(90deg);
+}
+
+
+//SKILLS
+.skill-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  width: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Animations */
+.skill-card .fa-icon {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover .fa-icon {
+  color: #f39c12;
+  transform: scale(1.2);
+}
